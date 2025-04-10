@@ -50,9 +50,33 @@ Deploy the project to Apache Tomcat server.
 
 Start the server and open the app in your browser:
 
-arduino
-Copy
-Edit
+```sql commands:-
+CREATE DATABASE BankingDB;
+use BankingDB;
+CREATE TABLE accounts (
+    account_id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(50) NOT NULL,
+    balance DOUBLE DEFAULT 0.0,
+    full_name VARCHAR(100),
+    email VARCHAR(100)
+);
+
+CREATE TABLE transactions (
+    transaction_id INT AUTO_INCREMENT PRIMARY KEY,
+    account_id INT,
+    transaction_type VARCHAR(10),
+    amount DOUBLE,
+    transaction_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (account_id) REFERENCES accounts(account_id)
+);
+select * from transactions;
+SELECT * FROM transactions WHERE account_id = 1;
+select * from transactions  where transaction_type is w and account_id=1;
+SELECT transaction_type, amount, transaction_date 
+FROM transactions 
+WHERE account_id = 1 
+ORDER BY transaction_date DESC;```
 http://localhost:8080/BankingApp/
 Folder Structure
 bash
