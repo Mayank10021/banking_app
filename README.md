@@ -77,6 +77,9 @@ SELECT transaction_type, amount, transaction_date
 FROM transactions 
 WHERE account_id = 1 
 ORDER BY transaction_date DESC;```
+
+
+
 http://localhost:8080/BankingApp/
 Folder Structure
 bash
