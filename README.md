@@ -1,6 +1,3 @@
-# banking_app
-BankingApp is a simple web-based banking system built with JSP, Servlets, and MySQL, offering basic functionalities like account management, fund transfers, and transaction history.
-
 # BankingApp
 
 A simple Java-based Banking Application using JSP, Servlets, and MySQL. This project provides basic banking functionalities such as account creation, login, balance inquiry, fund transfers, and transaction history. It is built using Java EE technologies and follows the MVC architecture.
